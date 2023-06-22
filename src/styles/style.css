@@ -1,17 +1,14 @@
 
 body {
     background-color: rgb(171, 92, 190);
-    width: 1900px;
-    height: 920px;
-    margin: 0 auto;
 }
 
-#circles {
+.gameDiv {
     /*outline: black dashed 2px;*/
-    opacity: 0.20;
+    opacity: 0.15;
     background-color: white;
     border: none;
     border-radius: 50%;
     width: 80px;
-    height: 80px;
+    height: 80px;  
 }
