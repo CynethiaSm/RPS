@@ -1,6 +1,7 @@
 
 body {
     background-color: rgb(171, 92, 190);
+    overflow: hidden;
 }
 
 .gameDiv {
