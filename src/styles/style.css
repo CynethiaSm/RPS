@@ -22,7 +22,7 @@ body {
     bottom: 800px;
     right: 700px;
     text-shadow: 2px 3px 2px rgb(88, 87, 87);
-    z-index: 2; /* Higher z-index */
+    z-index: 3; /* Higher z-index */
 }
 
 .letterFirst {
@@ -74,4 +74,20 @@ body {
     hsl(19, 90%, 52%), hsl(56, 100%, 50%));
     -webkit-background-clip: text;
     -webkit-text-fill-color:black;
+}
+
+.playerUser {
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    left: 30px;
+    bottom: 430px;
+}
+
+.playerComp {
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    right: 850px;
+    bottom: 430px;
 }
