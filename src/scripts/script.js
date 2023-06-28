@@ -37,6 +37,7 @@ function createRandomDiv() {
   div.style.position = 'absolute';
   div.style.left = position.x + "px";
   div.style.top = position.y + "px";
+  div.style.zIndex = '-1'
   divPositions.push(position);
   return div;
 }
