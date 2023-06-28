@@ -17,27 +17,61 @@ body {
 .title {
     font-family: 'Suez One', serif;
     color: #8ed1c8;
-    font-size: 85px;
+    font-size: 105px;
     position: absolute;
     bottom: 800px;
     right: 700px;
+    text-shadow: 2px 3px 2px rgb(88, 87, 87);
     z-index: 2; /* Higher z-index */
 }
 
 .letterFirst {
     /*outline: black dashed 2px;*/
+    transition: 0.4s;
+    transform: translateX(0);
+    cursor: grab;
     position: absolute;
     right: 610px;
 }
 
 .letterMiddle {
     /*outline: black dashed 2px;*/
+    transition: 0.4s;
+    transform: translateX(0);
+    cursor: grab;
     position: absolute;
-    right: 150px;
+    right: 110px;
 }
 
 .letterLast {
     /*outline: black dashed 2px;*/
+    transition: 0.4s;
+    transform: translateX(0);
+    cursor: grab;
     position: absolute;
     left: 10px;
+}
+
+.letterFirst:hover {
+    transform: translatey(-1rem);
+    background: -webkit-linear-gradient(120deg,
+    hsl(19, 90%, 52%), hsl(56, 100%, 50%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:black;
+}
+
+.letterMiddle:hover {
+    transform: translatey(-1rem);
+    background: -webkit-linear-gradient(120deg,
+    hsl(19, 90%, 52%), hsl(56, 100%, 50%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:black;
+}
+
+.letterLast:hover {
+    transform: translatey(-1rem);
+    background: -webkit-linear-gradient(120deg,
+    hsl(19, 90%, 52%), hsl(56, 100%, 50%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:black;
 }
