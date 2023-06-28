@@ -13,3 +13,31 @@ body {
     width: 80px;
     height: 80px;  
 }
+
+.title {
+    font-family: 'Suez One', serif;
+    color: #8ed1c8;
+    font-size: 85px;
+    position: absolute;
+    bottom: 800px;
+    right: 700px;
+    z-index: 2; /* Higher z-index */
+}
+
+.letterFirst {
+    /*outline: black dashed 2px;*/
+    position: absolute;
+    right: 610px;
+}
+
+.letterMiddle {
+    /*outline: black dashed 2px;*/
+    position: absolute;
+    right: 150px;
+}
+
+.letterLast {
+    /*outline: black dashed 2px;*/
+    position: absolute;
+    left: 10px;
+}
