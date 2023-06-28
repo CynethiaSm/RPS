@@ -91,3 +91,21 @@ body {
     right: 850px;
     bottom: 430px;
 }
+
+#user {
+    position: absolute;
+    right: 180px;
+    bottom: 214px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    color: white;
+}
+
+#computer {
+    position: absolute;
+    left: 980px;
+    bottom: 217px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    color: white;
+}
