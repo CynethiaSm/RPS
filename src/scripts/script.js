@@ -1,10 +1,32 @@
-const numDivs = 40;
+const numDivs = 55;
+const divSize = 50;
+const minDistance = 100;
 
-// Function to generate a random position
+// Array to store the positions of existing divs
+const divPositions = [];
+
+// Function to check if a new position collides with existing divs
+function collidesWithExisting(position) {
+  for (const existingPos of divPositions) {
+    const distanceX = Math.abs(position.x - existingPos.x);
+    const distanceY = Math.abs(position.y - existingPos.y);
+    if (distanceX < minDistance && distanceY < minDistance) {
+      return true;
+    }
+  }
+  return false;
+}
+
+// Function to generate a random position that doesn't collide with existing divs
 function getRandomPosition() {
-  const posX = Math.floor(Math.random() * window.innerWidth);
-  const posY = Math.floor(Math.random() * window.innerHeight);
-  return { x: posX, y: posY };
+  let position;
+  do {
+    position = {
+      x: Math.floor(Math.random() * (window.innerWidth - divSize)),
+      y: Math.floor(Math.random() * (window.innerHeight - divSize))
+    };
+  } while (collidesWithExisting(position));
+  return position;
 }
 
 // Function to create a random div and position it
@@ -15,10 +37,11 @@ function createRandomDiv() {
   div.style.position = 'absolute';
   div.style.left = position.x + "px";
   div.style.top = position.y + "px";
+  divPositions.push(position);
   return div;
 }
 
-// Generate and append random divs to the container
+// Generate and append random divs to the body
 for (let i = 0; i < numDivs; i++) {
   const randomDiv = createRandomDiv();
   document.body.appendChild(randomDiv);
