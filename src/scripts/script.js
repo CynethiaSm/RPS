@@ -1,6 +1,12 @@
-const numDivs = 55;
+const numDivs = 75;
 const divSize = 50;
 const minDistance = 100;
+
+// Function to create game mechanics
+function gameBasics() {
+  const divStart = document.createElement("div");
+  return divStart;
+}
 
 // Array to store the positions of existing divs
 const divPositions = [];
@@ -18,6 +24,7 @@ function collidesWithExisting(position) {
 }
 
 // Function to generate a random position that doesn't collide with existing divs
+
 function getRandomPosition() {
   let position;
   do {
@@ -38,6 +45,7 @@ function createRandomDiv() {
   div.style.left = position.x + "px";
   div.style.top = position.y + "px";
   div.style.zIndex = '-1'
+  div.style.rotate = position.x + "deg";
   divPositions.push(position);
   return div;
 }
