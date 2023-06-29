@@ -3,10 +3,19 @@ const divSize = 50;
 const minDistance = 100;
 
 // Function to create game mechanics
+document.addEventListener("DOMContentLoaded", function() {
+
+let startGame = document.querySelector("#startButton");
+startGame.addEventListener("click", gameBasics);
+
 function gameBasics() {
-  const divStart = document.createElement("div");
-  return divStart;
-}
+  let hiddenImage = document.getElementById("imageRight");
+  let hiddenImageLeft = document.getElementById("imageLeft");
+  hiddenImage.style.visibility = "visible";
+  hiddenImageLeft.style.visibility = "visible"
+  startGame.style.visibility = "hidden";
+} 
+});
 
 // Array to store the positions of existing divs
 const divPositions = [];
