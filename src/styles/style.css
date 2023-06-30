@@ -126,6 +126,13 @@ body {
     right: 2px;
     bottom:200px;
     visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+  }
+
+  #imageRight.visibleRight {
+    visibility: visible;
+    opacity: 1;
   }
 
   #imageLeft {
@@ -135,4 +142,11 @@ body {
     left: 2px;
     bottom:200px;
     visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.34s ease-in-out;
+  }
+
+  #imageLeft.visibleLeft {
+    visibility: visible;
+    opacity: 1;
   }
