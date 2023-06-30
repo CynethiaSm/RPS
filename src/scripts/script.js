@@ -11,8 +11,8 @@ startGame.addEventListener("click", gameBasics);
 function gameBasics() {
   let hiddenImage = document.getElementById("imageRight");
   let hiddenImageLeft = document.getElementById("imageLeft");
-  hiddenImage.style.visibility = "visible";
-  hiddenImageLeft.style.visibility = "visible"
+  hiddenImage.classList.add("visibleRight");
+  hiddenImageLeft.classList.add("visibleLeft");
   startGame.style.visibility = "hidden";
 } 
 });
