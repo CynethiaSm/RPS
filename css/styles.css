@@ -151,10 +151,57 @@ body {
     opacity: 1;
   }
 
-  #restartButton img {
+  #restartButton {
     width: 50px;
     height: 50px;
     margin-top: 570px;
     margin-left: 20px;
+    cursor: grab;
   }
-  
+
+  #buttonOptions {
+    position: absolute;
+    left: 145px;
+    bottom: 150px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.34s ease-in-out;
+  }
+
+  #buttonOptions.visibleButtons {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .rock,
+  .paper,
+  .scissors {
+    font-family: 'Suez One', serif;
+    font-size: 20px;
+    color: rgb(63, 184, 184);
+    background-color: rgb(146, 86, 196);
+    padding: 10px 25px 10px 25px;
+    margin: 0 30px 0 30px;
+  }
+
+  #rockChoice {
+    padding: 10px 30px 10px 30px;
+  }
+
+  #paperChoice {
+    
+  }
+
+  #scissorsChoice {
+
+  }
+
+  .imgStartButton {
+    width: 430px; 
+    height: 280px;
+    position: absolute;
+    left: 734px;
+    top: 336px;
+    cursor: grab;
+    visibility: hidden
+  }

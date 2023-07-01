@@ -2,20 +2,50 @@ const numDivs = 75;
 const divSize = 50;
 const minDistance = 100;
 
+
 // Function to create game mechanics
 document.addEventListener("DOMContentLoaded", function() {
+
+let hiddenImage = document.getElementById("imageRight");
+let hiddenImageLeft = document.getElementById("imageLeft");
+let showButtons = document.getElementById("buttonOptions");
 
 let startGame = document.querySelector("#startButton");
 startGame.addEventListener("click", gameBasics);
 
 function gameBasics() {
-  let hiddenImage = document.getElementById("imageRight");
-  let hiddenImageLeft = document.getElementById("imageLeft");
   hiddenImage.classList.add("visibleRight");
   hiddenImageLeft.classList.add("visibleLeft");
+  showButtons.classList.add("visibleButtons");
   startGame.style.visibility = "hidden";
+  startGame.removeEventListener("click", gameBasics);
 } 
 });
+
+// Create restart image
+
+function startButtonImage() {
+  let imgStart = document.createElement("img");
+  imgStart.className = "imgStartButton";
+  imgStart.src = "images/start-button.png";
+  imgStart.alt = "start button";
+  imgStart.style.visibility = "visible";
+
+  let containerImg = document.getElementById("containerImg");
+  containerImg.appendChild(imgStart);
+};
+
+// If restart image clicked then restart game
+
+function gameRestart() {
+  location.reload();
+}; 
+
+let restartButton = document.getElementById("restartButtonContainer");
+restartButton.addEventListener("click", gameRestart);
+
+
+
 
 // Array to store the positions of existing divs
 const divPositions = [];
