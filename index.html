@@ -8,16 +8,25 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Suez+One&display=swap" rel="stylesheet">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@700&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <div id="startButton">
         <img src="images/start-button.png" alt="start button">
     </div>
     <div id="containerImg"></div>
-    <div id="imageSides">
-        <img  id="imageRight" src="images/rockright.png">
-        <img  id="imageLeft" src="images/rock.png">
+    <div class="imageSidesRight">
+        <img  id="rockRight" src="images/rockright.png">
+        <img  id="paperRight" src="images/paperright.png">
+        <img  id="scissorsRight" src="images/scissorsright.png">
+    </div>
+    <div class="imageSidesLeft">
+        <img  id="rockLeft" src="images/rock.png">
+        <img  id="paperLeft" src="images/paperleft.png">
+        <img  id="scissorsLeft" src="images/scissorsleft.png">
     </div>
     <p class="title">
         <span class="letterFirst">ROCK</span>
@@ -41,6 +50,11 @@
     <span id="restartButtonContainer">
         <img id="restartButton" src="images/restart.png" alt="restart button">
     </span>
+    <span id="userPoints"></span>
+    <span id="computerPoints"></span>
+    <div>
+        <p id="tie">Tie</p>
+    </div>
     </footer>
     <script src="scripts/script.js"></script>
 </body>
