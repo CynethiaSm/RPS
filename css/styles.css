@@ -1,6 +1,7 @@
 
 body {
     background-color: #ab5cbe;
+    user-select: none;
     overflow: hidden;
 }
 
@@ -23,6 +24,7 @@ body {
     right: 730px;
     text-shadow: 2px 3px 2px rgb(88, 87, 87);
     z-index: 3; /* Higher z-index */
+    user-select: none;
 }
 
 .letterFirst {
@@ -117,91 +119,186 @@ body {
     left: 725px;
     top: 330px;
     cursor: grab;
+    z-index: 3; /* Higher z-index */
 }
 
-#imageRight {
+#imageSidesLeft {
+    width: 450px;
+    position: relative;
+}
+
+#imageSidesRight {
+    width: 450px;
+    position: relative;
+}
+
+/* Rock Image */
+
+#rockRight {
     /*outline: black dashed 2px;*/
     position: absolute;
     width: 1050px;
-    right: 2px;
-    bottom:200px;
+    top: 53%;
+    left: 73%;
     visibility: hidden;
     opacity: 0;
-    transition: opacity 0.4s ease-in-out;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease-in, top 0.5s ease-in-out;
   }
 
-  #imageRight.visibleRight {
+#rockRight.visibleRight {
     visibility: visible;
     opacity: 1;
   }
 
-  #imageLeft {
+#rockLeft {
     /*outline: black dashed 2px;*/
     position: absolute;
     width: 1050px;
-    left: 2px;
-    bottom:200px;
+    left: 526px;
+    top: 53%;
     visibility: hidden;
     opacity: 0;
-    transition: opacity 0.34s ease-in-out;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease-in-out, top 0.5s ease-in-out;
   }
 
-  #imageLeft.visibleLeft {
+#rockLeft.visibleLeft {
     visibility: visible;
     opacity: 1;
   }
 
-  #restartButton {
+  /* Paper Image */
+
+#paperRight {
+    /*outline: black dashed 2px;*/
+    position: absolute;
+    width: 1050px;
+    top: 48%;
+    left: 73%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: top 0.5s ease-in-out;
+  }
+
+/*#rockRight.visibleRight {
+    visibility: visible;
+    opacity: 1;
+  }*/
+
+#paperLeft {
+    /*outline: black dashed 2px;*/
+    position: absolute;
+    width: 1050px;
+    left: 526px;
+    top: 48%;;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: top 0.5s ease-in-out;
+  }
+
+/*#rockLeft.visibleLeft {
+    visibility: visible;
+    opacity: 1;
+  }*/
+
+/* Scissors Image */
+
+#scissorsRight {
+    /*outline: black dashed 2px;*/
+    position: absolute;
+    width: 1050px;
+    top: 48%;
+    left: 73%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: top 0.5s ease-in-out;
+}
+
+#scissorsLeft {
+    /*outline: black dashed 2px;*/
+    position: absolute;
+    width: 1050px;
+    left: 526px;
+    top: 48%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: top 0.5s ease-in-out;
+}
+
+#restartButton {
     width: 50px;
     height: 50px;
     margin-top: 570px;
     margin-left: 20px;
     cursor: grab;
-  }
+}
 
-  #buttonOptions {
+#tie {
+    position: absolute;
+    width: 50px;
+    left: 960px;
+    top: 110%;
+    padding: 20px 50px 20px 60px;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: rgb(255, 255, 255);
+    font-family: 'Suez One', serif;
+    font-size: 150%;
+    transform: translate(-50%, -50%);
+    transition: top 0.5s ease-in-out;
+}
+
+#buttonOptions {
     position: absolute;
     left: 145px;
     bottom: 150px;
     visibility: hidden;
     opacity: 0;
     transition: opacity 0.34s ease-in-out;
-  }
+}
 
-  #buttonOptions.visibleButtons {
+#buttonOptions.visibleButtons {
     visibility: visible;
     opacity: 1;
-  }
+}
 
-  .rock,
-  .paper,
-  .scissors {
+.rock,
+.paper,
+.scissors {
     font-family: 'Suez One', serif;
     font-size: 20px;
     color: rgb(63, 184, 184);
     background-color: rgb(146, 86, 196);
     padding: 10px 25px 10px 25px;
     margin: 0 30px 0 30px;
-  }
+}
 
-  #rockChoice {
+#rockChoice {
     padding: 10px 30px 10px 30px;
-  }
+}
 
-  #paperChoice {
-    
-  }
-
-  #scissorsChoice {
-
-  }
-
-  .imgStartButton {
-    width: 430px; 
-    height: 280px;
+#userPoints {
     position: absolute;
-    left: 734px;
-    top: 336px;
-    cursor: grab;
-    visibility: hidden
-  }
+    top: 840px;
+    left: 500px;
+    width: 200;
+    height: 500;
+    color: #fff;
+    font-family: 'Gaegu', cursive;
+    font-size: 80px;
+    border: none;
+    user-select: none;
+}
+
+#computerPoints {
+    position: absolute;
+    top: 840px;
+    right: 500px;
+    width: 200;
+    height: 500;
+    color: #fff;
+    font-family: 'Gaegu', cursive;
+    font-size: 80px;
+    border: none;
+    user-select: none;
+}
