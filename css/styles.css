@@ -60,6 +60,7 @@ body {
     hsl(19, 90%, 52%), hsl(56, 100%, 50%));
     -webkit-background-clip: text;
     -webkit-text-fill-color:black;
+    background-clip: text;
 }
 
 .letterMiddle:hover {
@@ -68,6 +69,7 @@ body {
     hsl(19, 90%, 52%), hsl(56, 100%, 50%));
     -webkit-background-clip: text;
     -webkit-text-fill-color:black;
+    background-clip: text;
 }
 
 .letterLast:hover {
@@ -76,6 +78,7 @@ body {
     hsl(19, 90%, 52%), hsl(56, 100%, 50%));
     -webkit-background-clip: text;
     -webkit-text-fill-color:black;
+    background-clip: text;
 }
 
 .playerUser {
